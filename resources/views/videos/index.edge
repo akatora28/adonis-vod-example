@@ -1,0 +1,29 @@
+<h1>Videos Index</h1>
+<a href="/videos/create">Create new Video</a>
+<hr />
+
+<style>
+.card {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container {
+  padding: 2px 16px;
+}
+</style>
+
+@each(video in videos)
+  <div class="card">
+    <div class="container">
+      <p><strong>Video Name:</strong> {{ video.name }}</p>
+      <a href="/videos/{{ video.id}}">Watch</a>
+    </div>
+  </div>
+@end

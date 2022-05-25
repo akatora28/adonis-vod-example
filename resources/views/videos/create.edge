@@ -1,0 +1,25 @@
+<h1>Create Video</h1>
+<a href="/videos">Back</a>
+<hr >
+<form
+  action="{{ route('VideosController.store') }}"
+  method="POST"
+  enctype="multipart/form-data"
+  >
+  <div>
+    <p>
+      <label for="name">Video Name</label>
+    </p>
+    <input type="text" name="name" />
+  </div>
+  <div>
+    <p>
+      <label for="videoFile">Choose a video file:</label>
+    </p>
+    <input type="file" name="videoFile" accept="video/mp4" />
+  </div>
+  <br />
+  <div>
+    <button type="submit">Create Video</button>
+  </div>
+</form>
