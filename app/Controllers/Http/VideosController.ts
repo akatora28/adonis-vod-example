@@ -26,7 +26,7 @@ export default class VideosController {
 
   public async show({ params, view }: HttpContextContract) {
     const video = await Video.findByOrFail('id', params.id)
-    const cloudfront = {url: 'dqcc3z3iwge6o.cloudfront.net'} // <- Put your cloudfront url here
+    const cloudfront = {url: '[YOUR-ID].cloudfront.net'} // <- Put your cloudfront url here
 
     return view.render('videos/show.edge', { video, cloudfront })
   }
